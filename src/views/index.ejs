@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/book.css" />
+  <title>Book</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    #container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    form {
+      width: 400px;
+      padding: 25px;
+      border-radius: 10px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .inp {
+      width: 100%;
+      height: 40px;
+      font-size: 18px;
+      border-radius: 8px;
+      padding: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .btn {
+      height: 45px;
+      width: 120px;
+      font-size: 18px;
+      border-radius: 8px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Get Trending Books</h1>
+    <form method="get" action="/books/getBook">
+      <h3>Enter the Name of Book:</h3>
+      <input type="text" name="bookName" id="bookName" class="inp" placeholder="e.g. Atomic Habits" />
+      <br />
+      <button type="submit" class="btn">Search</button>
+    </form>
+  </div>
+</body>
+</html>

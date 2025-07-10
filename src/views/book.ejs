@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/css/book.css">
+    <title>book</title>
+</head>
+<body>
+    <div id="container">
+        
+  <div class="header">
+
+     <h1>Discover Trending Books</h1>
+   <a href="http://localhost:4000/" class="btn" style="display: inline-block; width: 180px; height: 50px; line-height: 50px; text-align: center; text-decoration: none; font-size: 20px; background-color: #007bff; color: white; border-radius: 8px;">
+  Refresh
+</a>
+  </div>
+         
+<div id="top">
+    <form method="get" action="/books/getBook">
+        <h1>Enter the name of the book:</h1>
+        <input type="text" name="bookName" id="bookName" class="inp" placeholder="e.g. fluent python">
+        <button type="submit" class="btn">Search</button>
+    </form>
+
+  </div>
+
+<div id="container2">
+<div id="bottom">
+    <% for(let info of newBookdetails){ %>
+           <div class="book-card">
+        <p><b><u>Book Title</u> : </b> <%=info.title %> </p>
+        <p><b><u>Author</u> : </b><%=info?.author ? info.author : "Not available" %></p>
+       <p><b><u>Description</u> : </b><%= info?.desc ? info.desc : "Not available" %></p>
+       <p><b>Price : </b><%=info?.bookPrice ? info.bookPrice : "Not_for_Sale"%> </p>
+       <p><a href="<%=info?.link%>">Link to the book</a></p>
+        <hr>
+ </div>
+    <%}%>
+</div>
+</div>
+
+</div>
+</body>
+</html>

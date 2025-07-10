@@ -34,7 +34,7 @@ const getBook=asyncHandler(async (req,res)=>{
     res.render("./book.ejs",{newBookdetails});
 }
 catch(Error){
-    next(new ApiError(Error,500));
+    return new ApiError(Error,500);
 }
 });
 const getIndex=(req,res)=>{
@@ -42,7 +42,7 @@ const getIndex=(req,res)=>{
     res.render("./index.ejs");
     }
     catch(Err){
-        next(new ApiError(Err,500));
+        return new ApiError(Err,500);
     }
 }
 

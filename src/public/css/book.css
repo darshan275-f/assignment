@@ -26,7 +26,7 @@ body{
 }
 .inp{
     width: 450px;
-    height: 30px;
+    height: 25px;
     border-radius: 10px;
     padding: 3px;
   
@@ -63,7 +63,7 @@ body{
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 .book-card h3, .book-card h4, .book-card p {
-    font-size: 20px;
+    font-size: 13px;
     margin: 10px 0;
     font-family: sans-serif;
 }
